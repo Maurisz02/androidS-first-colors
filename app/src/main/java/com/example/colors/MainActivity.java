@@ -29,6 +29,13 @@ public class MainActivity extends AppCompatActivity {
                 int green = rnd.nextInt(256);
                 int blue = rnd.nextInt(256);
                 layout.setBackgroundColor(Color.rgb(red,green,blue));
+                String szinSzoveg = String.format("(%d, %d, %d)", red,green,blue);
+                textSzin.setText(szinSzoveg);
+                if((red+green+blue)>450){
+                    textSzin.setTextColor(Color.BLACK);
+                }else{
+                    textSzin.setTextColor(Color.WHITE);
+                }
             }
         });
     }
